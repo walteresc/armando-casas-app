@@ -1,0 +1,26 @@
+name: armando_casas
+description: App cliente para servicios del hogar - Armando Casas
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.2.1
+  flutter_rating_bar: ^4.0.1
+  timeline_tile: ^2.0.0
+  smooth_page_indicator: ^1.1.0
+  animate_do: ^3.3.4
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
