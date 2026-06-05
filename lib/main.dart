@@ -23,7 +23,7 @@ class ArmandoCasasApp extends StatelessWidget {
       title: 'Armando Casas',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      initialRoute: AppRoutes.login,
+      initialRoute: AppRoutes.splash,
       onGenerateRoute: AppRoutes.generateRoute,
     );
   }

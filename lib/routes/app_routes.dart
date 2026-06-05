@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/splash_screen.dart';
 import '../screens/login_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/nueva_solicitud_screen.dart';
@@ -7,7 +8,8 @@ import '../screens/calificacion_screen.dart';
 import '../models/models.dart';
 
 class AppRoutes {
-  static const String login = '/';
+  static const String splash = '/';
+  static const String login = '/login';
   static const String home = '/home';
   static const String nuevaSolicitud = '/nueva-solicitud';
   static const String seguimiento = '/seguimiento';
@@ -15,6 +17,8 @@ class AppRoutes {
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case splash:
+        return _fadeRoute(const SplashScreen(), settings);
       case login:
         return _fadeRoute(const LoginScreen(), settings);
       case home:
@@ -28,7 +32,7 @@ class AppRoutes {
         final solicitud = settings.arguments as Solicitud;
         return _slideRoute(CalificacionScreen(solicitud: solicitud), settings);
       default:
-        return _fadeRoute(const LoginScreen(), settings);
+        return _fadeRoute(const SplashScreen(), settings);
     }
   }
 
